@@ -1,6 +1,11 @@
 FROM python:3.12-slim
-COPY requirements.txt /app/requirements.txt
+
 WORKDIR /app
+
+COPY requirements.txt /app/requirements.txt
+
 RUN pip install -r requirements.txt
+
 COPY . /app
-CMD ["potato"]
+
+CMD ["python3", "potato"]
